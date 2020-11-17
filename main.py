@@ -39,6 +39,7 @@ class main(MDApp):
         sm = self.root
         sm.current = "two"
     def build(self):
+        print("me")
         self.title = "Test"
         self.theme_cls.theme_style = "Light"
         self.theme_cls.primary_palette = "Brown"
