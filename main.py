@@ -32,6 +32,7 @@ class main(MDApp):
         for item in self.children:
             if item.text_color == self.theme_cls.primary_color:
                 item.text_color = self.theme_cls.text_color
+                print("eyyy")
                 break
         instance_item.text_color = self.theme_cls.primary_color
     def change(self):
