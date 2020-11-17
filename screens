@@ -1,0 +1,105 @@
+LOGIN SCREEN:
+    FloatLayout:
+        orientation:"vertical"
+        Image:
+            source:"frontimages/image one.png"
+            size:300, 300
+            allow_stretch: True
+            keep_ratio : False
+        MDLabel:
+            text:"Hello world"
+            halign:"center"
+            pos_hint:{"center_x":.5, "center_y":.7}
+        MDTextFieldRound:
+            id:user_login_phone
+            pos_hint:{"center_x":.5, "center_y":.6}
+            size_hint: .8,.054
+            hint_text:"Phone:"
+            line_color :app.theme_cls.primary_color
+            normal_color: 0,0,0,0
+            icon_left:"phone"
+            color_active:1, 1, 1, 1
+            icon_left_color:app.theme_cls.primary_color
+        MDTextFieldRound:
+            id:user_login_password
+            pos_hint:{"center_x":.5, "center_y":.48}
+            size_hint: .8,.054
+            hint_text:"password:"
+            line_color:app.theme_cls.primary_color
+            normal_color: 0,0,0,0
+            icon_left:"lock"
+            icon_left_color:app.theme_cls.primary_color
+            color_active:1, 1, 1, 1
+        MDFillRoundFlatButton:
+            text:"Login"
+            size_hint: .7, .07
+            pos_hint:{"center_x":.5, "center_y":.38}
+            text_color:1, 1, 1, 1
+        MDRoundFlatButton:
+            text:"sign up?"
+            size_hint: .7, .05
+            text_color:app.theme_cls.primary_color
+            pos_hint:{"center_x":.5, "center_y":.28}
+
+
+REGISTER SCREEN:
+    FloatLayout:
+        orientation:"vertical"
+        MDLabel:
+            text:"Register Account"
+            halign:"center"
+            pos_hint:{"center_x":.5, "center_y":.95}
+            color:app.theme_cls.primary_color
+        MDIcon:
+            icon:"account"
+            pos_hint:{"center_x":.75, "center_y":.95}
+            color:app.theme_cls.primary_color
+        MDTextField:
+            id:user_name
+            pos_hint:{"center_x":.5, "center_y":.85}
+            size_hint:.9, None
+            hint_text:"Name:"
+            required:True
+            helper_text_mode: "on_focus"
+            helper_text: "Example: John peter mbuya"
+        MDTextField:
+            id:user_phone
+            pos_hint:{"center_x":.5, "center_y":.75}
+            size_hint:.9, None
+            hint_text:"Phone Number:"
+            required:True
+        MDTextField:
+            id:user_password
+            pos_hint:{"center_x":.5, "center_y":.65}
+            size_hint:.9, None
+            hint_text:"Password:"
+            password:True
+            required:True
+        MDTextField:
+            id:user_city
+            pos_hint:{"center_x":.5, "center_y":.55}
+            size_hint:.9, None
+            hint_text:"City:"
+            required:True
+        MDTextField:
+            id:user_address
+            pos_hint:{"center_x":.5, "center_y":.45}
+            size_hint:.9, None
+            hint_text:"Address:"
+            required:True
+            helper_text_mode: "on_focus"
+            helper_text: "Example: Arusha/sombetini"
+        MDTextField:
+            id:user_email
+            pos_hint:{"center_x":.5, "center_y":.35}
+            size_hint:.9, None
+            hint_text:"Email:"
+            required:True
+            helper_text_mode: "on_focus"
+            helper_text: "Example: yourname@gmail.com"
+        MDFillRoundFlatButton:
+            id:register
+            text:"Register"
+            size_hint: .7, .06
+            pos_hint:{"center_x":.5, "center_y":.2}
+            text_color:1, 1, 1, 1

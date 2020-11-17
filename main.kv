@@ -1,0 +1,97 @@
+##:kivy
+ScreenManager:
+    Screen:
+        name:"one"
+        MDLabel:
+            text:"one"
+            halign:"center"
+        MDIconButton:
+            icon:"facebook"
+            on_release:
+                app.change()
+    Screen:
+        name:"two"
+        NavigationLayout:
+            ScreenManager:
+                id:screen_manager
+                Screen:
+                    name:"nyu"
+                    FloatLayout:
+                        orientation:"vertical"
+                        MDIconButton:
+                            icon:"microsoft"
+                            pos_hint:{"center_x":.3, "center_y":.9}
+                            on_release:
+                                nav_drawer.toggle_nav_drawer()
+                Screen:
+                    name:"nyo"
+                    MDLabel:
+                        text:"two"
+                        halign:"center"
+                    MDIconButton:
+                        icon:"apple"
+                        pos_hint:{"center_x":.5, "center_y":.5}
+                        on_release:
+                            nav_drawer.toggle_nav_drawer()
+            MDNavigationDrawer:
+                id:nav_drawer
+                MDBoxLayout:
+                    id:father
+                    orientation:"vertical"
+                    spacing: dp(5)
+                    Image:
+                        id: avatar
+                        size_hint_y: .3
+                        source: "image.png"
+                        allow_stretch: True
+                        keep_ratio: False
+                    MDLabel:
+                        id: drawer_title
+                        font_style: 'H6'
+                        size_hint_y: None
+                        height: self.texture_size[1]
+                        markup: True
+                        theme_text_color: 'Primary'
+                        text:"Aqulline"
+                    MDSeparator:
+                    MDLabel:
+                        text:"Content"
+                        font_style: "Subtitle1"
+                        size_hint_y: None
+                        halign: 'center'
+                        height: self.texture_size[1]
+                        theme_text_color: "Secondary"
+
+                    ScrollView:
+                        size_hint_y: .7
+                        MDList:
+                            id:dady
+                            OneLineIconListItem:
+                                id:dog
+                                on_release:
+                                    screen_manager.current="nyo"
+                                    nav_drawer.set_state("close")
+                                    print(avatar.texture_size)
+                                text: 'dog'
+                                IconLeftWidget:
+                                    icon:"dog"
+
+                            OneLineIconListItem:
+                                id:cat
+                                on_release:
+                                    screen_manager.current="nyu"
+                                    nav_drawer.set_state("close")
+                                text: 'cat'
+                                IconLeftWidget:
+                                    icon:"cat"
+                            Lists:
+                                text:"me"
+                                icon:"apple"
+
+<Lists>
+    Icons:
+        id:_icon
+        icon:"apple"
+
+        
+   
