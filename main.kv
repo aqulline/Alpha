@@ -5,6 +5,27 @@ ScreenManager:
         MDLabel:
             text:"one"
             halign:"center"
+        ScrollView:
+            MDGridLayout:
+                cols: 2
+                adaptive_height: True
+                padding: dp(4), dp(4)
+                spacing: dp(4)
+                Image:
+                    source:"frontimages/image one.png"
+                    size_hint_y: None
+                    height: "240dp"
+                    allow_stretch: True
+                    keep_ratio : False
+                    MDLabel:
+                        text:"HI"
+                Image:
+                    source:"frontimages/image one.png"
+                    size_hint_y: None
+                    height: "240dp"
+                    allow_stretch: True
+                    keep_ratio : False
+
         MDIconButton:
             icon:"facebook"
             on_release:
