@@ -13,6 +13,7 @@ from kivy.clock import Clock
 from kivymd.uix.list import MDList, IconLeftWidget, OneLineIconListItem, ILeftBody
 from kivy.properties import ObjectProperty, StringProperty
 from kivymd.uix.boxlayout import BoxLayout
+from kivy.uix.image import AsyncImage
 from kivymd.uix.button import MDIconButton, MDRectangleFlatIconButton
 from kivymd.theming import ThemableBehavior
 from kivymd.icon_definitions import md_icons
