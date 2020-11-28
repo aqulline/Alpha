@@ -1,0 +1,14 @@
+city_names = [
+    "arusha", "mwanza", "dar-es-salaam", "tanga", "kigoma", "rukwa", "ruvuma",
+    "ruvu", "mororogoro", "singida", "shinyanga", "dodoma", "njombe", "bukoba",
+    "kilimanjaro", "lindi", "tabora"
+    ]
+    arusha_streets_names= [
+        "sombetini", "ngarenaro"
+    ]
+
+    x = input("write street names")
+
+    arusha_ward_names =[
+        "morormbo", "mbauda"
+    ]
